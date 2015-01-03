@@ -1,0 +1,101 @@
+[
+	{
+
+        "id": 1,
+        "name": "Category One",
+        "freindlyName": "cat-one",
+        "products": 
+        [
+    		{
+		        "id": 1,
+		        "name": "Product One",
+		        "freindlyName": "product-one",
+		        "description": "this is a description for product one",
+		        "price": 450,
+		        "featured": true
+	        },
+	        {
+		        "id": 2,
+		        "name": "Product Two",
+		        "freindlyName": "product-two",
+		        "description": "this is a description for product one",
+		        "price": 210,
+		        "latest": true
+	        },
+	        {
+		        "id": 4,
+		        "name": "Product Four",
+		        "freindlyName": "product-four",
+		        "description": "this is a description for product one",
+		        "price": 300,
+		        "featured": true,
+		        "latest": true
+        	}
+        ]
+    },
+    {
+
+        "id": 2,
+        "name": "Category Two",
+        "freindlyName": "cat-two",
+        "products": 
+        [
+    		{
+		        "id": 3,
+		        "name": "Product Three",
+		        "freindlyName": "product-three",
+		        "description": "this is a description for product one",
+		        "price": 110,
+		        "featured": true
+	        },
+	        {
+		        "id": 2,
+		        "name": "Product Two",
+		        "freindlyName": "product-two",
+		        "description": "this is a description for product one",
+		        "price": 210,
+		        "featured": true
+	        },
+	        {
+		        "id": 4,
+		        "name": "Product Four",
+		        "freindlyName": "product-four",
+		        "description": "this is a description for product one",
+		        "price": 300,
+		        "latest": true
+        	}
+        ]
+    },
+    {
+
+        "id": 3,
+        "name": "Category Three",
+        "freindlyName": "cat-three",
+        "products": 
+        [
+    		{
+		        "id": 1,
+		        "name": "Product One",
+		        "freindlyName": "product-one",
+		        "description": "this is a description for product one",
+		        "price": 450,
+		        "latest": true
+	        },
+	        {
+		        "id": 2,
+		        "name": "Product Two",
+		        "freindlyName": "product-two",
+		        "description": "this is a description for product one",
+		        "price": 210
+	        },
+	        {
+		        "id": 3,
+		        "name": "Product Three",
+		        "freindlyName": "product-three",
+		        "description": "this is a description for product one",
+		        "price": 110,
+		        "latest": true
+        	}
+        ]
+    }
+]

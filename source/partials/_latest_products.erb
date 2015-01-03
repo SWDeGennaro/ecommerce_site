@@ -1,0 +1,48 @@
+<div class="row">
+	<div class="span12">
+		<h4 class="title">
+			<span class="pull-left"><span class="text"><span class="line">Latest <strong>Products</strong></span></span></span>
+			<span class="pull-right">
+				<a class="left button" href="#myCarousel-2" data-slide="prev"></a><a class="right button" href="#myCarousel-2" data-slide="next"></a>
+			</span>
+		</h4>
+		<div id="myCarousel-2" class="myCarousel carousel slide">
+			<div class="carousel-inner">
+				<div class="active item">
+					<ul class="thumbnails">
+						<% data.categories.each do |c| %>
+							<% c[:products].select { |p| p.latest == true }.take(1).each do |p|%>
+								<li class="span3">
+									<div class="product-box">
+										<span class="sale_tag"></span>
+										<p><a href=""><img src="http://placehold.it/342x342" /></a></p>
+										<%= link_to "#{p[:name]}", "/#{c[:freindlyName]}/#{p[:freindlyName]}.html", :class => "title" %><br/>
+										<span class="category"><%= p[:description] %></span>
+										<p class="price">£ <%= p[:price] %></p>
+									</div>
+								</li>
+							<% end %>
+						<% end %>
+					</ul>
+				</div>
+				<div class="item">
+					<ul class="thumbnails">
+						<% data.categories.each do |c| %>
+							<% c[:products].select { |p| p.latest == true }.reverse_each.take(1).each do |p|%>
+								<li class="span3">
+									<div class="product-box">
+										<span class="sale_tag"></span>
+										<p><a href="product_detail.html"><img src="http://placehold.it/342x342" /></a></p>
+										<%= link_to "#{p[:name]}", "/#{c[:freindlyName]}/#{p[:freindlyName]}.html", :class => "title" %><br/>
+										<span class="category"><%= p[:description] %></span>
+										<p class="price">£ <%= p[:price] %></p>
+									</div>
+								</li>
+							<% end %>
+						<% end %>							
+					</ul>
+				</div>
+			</div>							
+		</div>
+	</div>						
+</div>

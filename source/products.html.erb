@@ -1,0 +1,26 @@
+<% products = locals[:products] %>
+
+<section class="header_text sub">
+	<h4><span>Products</span></h4>
+</section>
+<section class="main-content">
+	<div class="row">
+        <%= partial 'partials/side_menu' %>
+		<div class="span9">								
+			<ul class="thumbnails listing-products">
+				<% products.each do |p| %>
+					<li class="span3">
+						<div class="product-box">
+							<span class="sale_tag"></span>												
+							<a href="product_detail.html"><img alt="" src="http://placehold.it/342x342" /></a><br/>	
+							<%= link_to "#{p[:name]}", "/#{p[:freindlyName]}.html", :class => "title" %><br/>
+							<p class="price">£<%= p[:price] %></p>
+						</div>
+					</li> 
+				<% end %> 
+			</ul>								
+			<hr>
+		</div>
+		
+	</div>
+</section>
