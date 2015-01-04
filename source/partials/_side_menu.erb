@@ -2,37 +2,24 @@
 	<div class="block">	
 		<ul class="nav nav-list">
 			<li class="nav-header">Categories</li>
-			<li><a href="products.html">Cat One</a></li>
-			<li class="active"><a href="products.html">Cat Two</a></li>
-			<li><a href="products.html">Cat Three</a></li>
-            <li><a href="products.html">Cat Four</a></li>
-			<li><a href="products.html">Cat Five</a></li>
-			<li><a href="products.html">Cat Six</a></li>
-			<li><a href="products.html">Cat Seven</a></li>
-            <li><a href="products.html">Cat Eight</a></li>
-		</ul>
+            <% data.categories.take(8).each do |c| %>
+                <li class="<%= nav_active(c[:name]) %>"><%= link_to "#{c[:name]}", "/#{c[:freindlyName]}.html" %></li>
+            <% end %>
+        </ul>
 	</div>
     <div class="block">								
 		<h4 class="title"><strong>Best</strong> Seller</h4>								
 		<ul class="small-product">
-			<li>
-				<a href="#" title="Praesent tempor sem sodales">
-					<img alt="" src="http://placehold.it/342x342" />
-				</a>
-				<a href="#">Praesent tempor sem</a>
-			</li>
-			<li>
-				<a href="#" title="Praesent tempor sem sodales">
-					<img alt="" src="http://placehold.it/342x342" />
-				</a>
-				<a href="#">Praesent tempor sem</a>
-			</li>
-            <li>
-				<a href="#" title="Praesent tempor sem sodales">
-					<img alt="" src="http://placehold.it/342x342" />
-				</a>
-				<a href="#">Praesent tempor sem</a>
-			</li>
+			<% data.categories.each do |c| %>
+				<% c[:products].select { |p| p.bestSeller == true }.take(5).each do |p|%>
+					<li>
+						<% link_to "/#{c[:freindlyName]}/#{p[:freindlyName]}.html", :class => "/#{p[:name]}" do %>
+							<%= image_tag "http://placehold.it/342x342" %>
+						<% end %>
+						<%= link_to "#{p[:name]}", "/#{c[:freindlyName]}/#{p[:freindlyName]}.html", :class => "title" %>
+					</li>
+				<% end %>
+			<% end %>
 		</ul>
 	</div>
 </div>						

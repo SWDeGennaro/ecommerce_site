@@ -29,13 +29,20 @@
 ###
 data.categories.each do |c|
 	c[:products].each do |p|
-		proxy "/#{c[:freindlyName]}/#{p[:freindlyName]}.html", "product_detail.html", :locals => { :product => p }, :ignore => true
+		proxy "/#{c[:freindlyName]}/#{p[:freindlyName]}.html", "product_detail.html", :locals => { :category => c, :product => p }, :ignore => true
 	end
 end
 
 data.categories.each do |c|
-	proxy "/#{c[:freindlyName]}.html", "products.html", :locals => { :products => c[:products] }, :ignore => true
+	proxy "/#{c[:freindlyName]}.html", "products.html", :locals => { :category => c, :products => c[:products] }, :ignore => true
 end
+
+###
+# Page command
+###
+#
+
+active_nav = {:class => "active"}
 
 
 ###
@@ -57,11 +64,21 @@ end
 #   end
 # end
 
+# Active page helper 
+helpers do
+  def nav_active(page)
+    @page_id == page ? {:class => "active"} : {}
+  end
+end
+
 set :css_dir, 'themes/css'
 
 set :js_dir, 'themes/js'
 
 set :images_dir, 'themes/images'
+
+#remove layout for sitemap
+page "/sitemap.xml", :layout => false
 
 # Build-specific configuration
 configure :build do

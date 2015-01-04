@@ -48,7 +48,7 @@
                     <a href="index.html" class="logo pull-left"><img src="themes/images/logo.png" class="site_logo" alt=""></a>
                     <nav id="menu" class="pull-right">
                         <ul>
-                            <% data.categories.each do |c| %>
+                            <% data.categories.take(4).each do |c| %>
                                 <li><%= link_to "#{c[:name]}", "/#{c[:freindlyName]}.html" %></li>
                             <% end %>
                         </ul>

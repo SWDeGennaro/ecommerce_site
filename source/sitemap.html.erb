@@ -1,11 +1,23 @@
-﻿<section class="header_text sub">
+﻿<% root_url = data.sitemap.url %>
+<section class="header_text sub">
 	<h4><span>Site Map</span></h4>
 </section>
 <section class="main-content">				
 	<div class="row">
 		<%= partial 'partials/side_menu' %>	
 		<div class="span7">
-			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+			<ul>
+    			<% sitemap.resources.each do |page| %>
+			        <% if page.url =~ /\.html/ %>
+			            <li><a href="<%= "#{root_url}#{page.url}" %>"><%= "#{root_url}#{page.url}" %></a></li>
+			        <% end %>
+			    <% end %>
+			</ul>		
 		</div>				
 	</div>
-</section>			
+</section>	
+
+
+
+
+

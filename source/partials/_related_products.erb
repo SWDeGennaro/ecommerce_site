@@ -1,0 +1,56 @@
+<% category = locals[:category] %>
+<div class="span9">	
+	<br>
+	<h4 class="title">
+		<span class="pull-left"><span class="text"><strong>Related</strong> Products</span></span>
+		<span class="pull-right">
+			<a class="left button" href="#myCarousel-1" data-slide="prev"></a><a class="right button" href="#myCarousel-1" data-slide="next"></a>
+		</span>
+	</h4>
+	<div id="myCarousel-1" class="carousel slide">
+		<div class="carousel-inner">
+			<div class="active item">
+				<ul class="thumbnails listing-products">
+					<% data.categories.select { |c| c.name == category.name }.take(1).each do |c|%>
+						<% c[:products].take(3).each do |p|%>
+							<li class="span3">
+								<div class="product-box">
+									<span class="sale_tag"></span>
+									<p>
+										<% link_to "/#{c[:freindlyName]}/#{p[:freindlyName]}.html" do %>
+											<%= image_tag "http://placehold.it/342x342" %>
+										<% end %>
+									</p>
+									<%= link_to "#{p[:name]}", "/#{c[:freindlyName]}/#{p[:freindlyName]}.html", :class => "title" %><br/>
+									<span class="category"><%= p[:description] %></span>
+									<p class="price">£ <%= p[:price] %></p>
+								</div>
+							</li>
+						<% end %>
+					<% end %>								
+				</ul>
+			</div>
+			<div class="item">
+				<ul class="thumbnails listing-products">
+					<% data.categories.select { |c| c.name == category.name }.take(1).each do |c|%>
+						<% c[:products].reverse_each.take(3).each do |p|%>
+							<li class="span3">
+								<div class="product-box">
+									<span class="sale_tag"></span>
+									<p>
+										<% link_to "/#{c[:freindlyName]}/#{p[:freindlyName]}.html" do %>
+											<%= image_tag "http://placehold.it/342x342" %>
+										<% end %>
+									</p>
+									<%= link_to "#{p[:name]}", "/#{c[:freindlyName]}/#{p[:freindlyName]}.html", :class => "title" %><br/>
+									<span class="category"><%= p[:description] %></span>
+									<p class="price">£ <%= p[:price] %></p>
+								</div>
+							</li>
+						<% end %>
+					<% end %>			
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

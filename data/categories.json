@@ -12,21 +12,22 @@
 		        "freindlyName": "product-one",
 		        "description": "this is a description for product one",
 		        "price": 450,
-		        "featured": true
+		        "featured": true,
+		        "bestSeller": true
 	        },
 	        {
 		        "id": 2,
 		        "name": "Product Two",
 		        "freindlyName": "product-two",
-		        "description": "this is a description for product one",
+		        "description": "this is a description for product two",
 		        "price": 210,
 		        "latest": true
 	        },
 	        {
 		        "id": 4,
-		        "name": "Product Four",
-		        "freindlyName": "product-four",
-		        "description": "this is a description for product one",
+		        "name": "Product Three",
+		        "freindlyName": "product-three",
+		        "description": "this is a description for product three",
 		        "price": 300,
 		        "featured": true,
 		        "latest": true
@@ -42,27 +43,28 @@
         [
     		{
 		        "id": 3,
-		        "name": "Product Three",
-		        "freindlyName": "product-three",
-		        "description": "this is a description for product one",
+		        "name": "Product Four",
+		        "freindlyName": "product-four",
+		        "description": "this is a description for product four",
 		        "price": 110,
 		        "featured": true
 	        },
 	        {
 		        "id": 2,
-		        "name": "Product Two",
-		        "freindlyName": "product-two",
-		        "description": "this is a description for product one",
+		        "name": "Product Five",
+		        "freindlyName": "product-five",
+		        "description": "this is a description for product five",
 		        "price": 210,
 		        "featured": true
 	        },
 	        {
 		        "id": 4,
-		        "name": "Product Four",
-		        "freindlyName": "product-four",
-		        "description": "this is a description for product one",
+		        "name": "Product Six",
+		        "freindlyName": "product-six",
+		        "description": "this is a description for product six",
 		        "price": 300,
-		        "latest": true
+		        "latest": true,
+		        "bestSeller": true
         	}
         ]
     },
@@ -75,24 +77,25 @@
         [
     		{
 		        "id": 1,
-		        "name": "Product One",
-		        "freindlyName": "product-one",
-		        "description": "this is a description for product one",
+		        "name": "Product Seven",
+		        "freindlyName": "product-seven",
+		        "description": "this is a description for product seven",
 		        "price": 450,
 		        "latest": true
 	        },
 	        {
 		        "id": 2,
-		        "name": "Product Two",
-		        "freindlyName": "product-two",
-		        "description": "this is a description for product one",
-		        "price": 210
+		        "name": "Product Eight",
+		        "freindlyName": "product-eigth",
+		        "description": "this is a description for product eight",
+		        "price": 210,
+		        "bestSeller": true
 	        },
 	        {
 		        "id": 3,
-		        "name": "Product Three",
-		        "freindlyName": "product-three",
-		        "description": "this is a description for product one",
+		        "name": "Product Nine",
+		        "freindlyName": "product-nine",
+		        "description": "this is a description for product nine",
 		        "price": 110,
 		        "latest": true
         	}
