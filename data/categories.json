@@ -13,7 +13,41 @@
 		        "description": "this is a description for product one",
 		        "price": 450,
 		        "featured": true,
-		        "bestSeller": true
+		        "bestSeller": true,
+		        "features": [ "test feature one", "test feature two", "test feature three"],
+		        "images":
+		        [
+		        	{
+		        		"largeImageTitle": "Product One Image One",
+		        		"largeImageUrl": "http://placehold.it/342x342",
+		        		"thumbnailTitle": "Product One Image One Thumb",
+		        		"thumbnailUrl": "http://placehold.it/342x342"
+		        	},
+		        	{
+		        		"largeImageTitle": "Product One Image Two",
+		        		"largeImageUrl": "http://placehold.it/342x342",
+		        		"thumbnailTitle": "Product One Image One Thumb",
+		        		"thumbnailUrl": "http://placehold.it/342x342"
+		        	},
+		        	{
+		        		"largeImageTitle": "Product One Image Three",
+		        		"largeImageUrl": "http://placehold.it/342x342",
+		        		"thumbnailTitle": "Product One Image One Thumb",
+		        		"thumbnailUrl": "http://placehold.it/342x342"
+		        	},
+		        	{
+		        		"largeImageTitle": "Product One Image Four",
+		        		"largeImageUrl": "http://placehold.it/342x342",
+		        		"thumbnailTitle": "Product One Image One Thumb",
+		        		"thumbnailUrl": "http://placehold.it/342x342"
+		        	},
+		        	{
+		        		"largeImageTitle": "Product One Image Five",
+		        		"largeImageUrl": "http://placehold.it/342x342",
+		        		"thumbnailTitle": "Product One Image One Thumb",
+		        		"thumbnailUrl": "http://placehold.it/342x342"
+		        	}
+		        ]
 	        },
 	        {
 		        "id": 2,
