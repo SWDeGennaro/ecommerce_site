@@ -32,7 +32,7 @@
 						<p><%= p[:description] %></p>
 						<p><strong>Featues & Benefits</strong></p>
 						<ul>
-							<% p[:features].each do |f|%>
+							<% p[:features].each do |f| %>
 								<li><%= f %></li>
 							<% end %> 
 						</ul>						
@@ -40,7 +40,7 @@
 				</div>
 				<div class="span5">
 					<form class="form-inline">		
-						<a href="/contact.html" class="btn btn-inverse">Enquire</a>
+						<%= link_to "Enquire", "/contact.html?#{p[:freindlyName]}", :class => "btn btn-inverse" %>
 					</form>
 				</div>							
 			</div>
@@ -50,7 +50,18 @@
 						<li class="active"><a href="#home">Specification</a></li>
 					</ul>							 
 					<div class="tab-content">
-						<div class="tab-pane active" id="home">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem</div>
+						<div class="tab-pane active" id="home">
+							<table class="table table-striped shop_attributes">	
+								<tbody>
+									<% p[:specifications].each do |s| %>
+										<tr class="">
+											<th><%= s.split(',').first %></th>
+											<td><%= s.split(',').last %></td>
+										</tr>	
+									<% end %>
+								</tbody>
+							</table>
+						</div>
 					</div>							
 				</div>						
 				<%= partial 'partials/related_products', :locals => { :category => c } %>

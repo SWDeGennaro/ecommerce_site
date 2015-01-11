@@ -10,11 +10,12 @@
 		        "id": 1,
 		        "name": "Product One",
 		        "freindlyName": "product-one",
-		        "description": "this is a description for product one",
+		        "description": "this is a description for product one this is a description for product one this is a description for product one this is a description for product one this is a description for product one this is a description for product one this is a description for product one this is a description for product one this is a description for product one",
 		        "price": 450,
 		        "featured": true,
 		        "bestSeller": true,
 		        "features": [ "test feature one", "test feature two", "test feature three"],
+		        "specifications": [ "spec one title, test spec one", "spec two title, test spec two", "spec three title, test spec two", "spec three title, test spec three", "spec four title,  test spec four"],
 		        "images":
 		        [
 		        	{
@@ -55,7 +56,9 @@
 		        "freindlyName": "product-two",
 		        "description": "this is a description for product two",
 		        "price": 210,
-		        "latest": true
+		        "latest": true,
+		        "features": [ "test feature one", "test feature two", "test feature three"],
+		        "specifications": [ "spec one title, test spec one", "spec two title, test spec two", "spec three title, test spec two", "spec three title, test spec three", "spec four title,  test spec four"]
 	        },
 	        {
 		        "id": 4,
@@ -64,7 +67,9 @@
 		        "description": "this is a description for product three",
 		        "price": 300,
 		        "featured": true,
-		        "latest": true
+		        "latest": true,
+		         "features": [ "test feature one", "test feature two", "test feature three"],
+		        "specifications": [ "spec one title, test spec one", "spec two title, test spec two", "spec three title, test spec two", "spec three title, test spec three", "spec four title,  test spec four"]
         	}
         ]
     },
@@ -81,7 +86,9 @@
 		        "freindlyName": "product-four",
 		        "description": "this is a description for product four",
 		        "price": 110,
-		        "featured": true
+		        "featured": true,
+		         "features": [ "test feature one", "test feature two", "test feature three"],
+		        "specifications": [ "spec one title, test spec one", "spec two title, test spec two", "spec three title, test spec two", "spec three title, test spec three", "spec four title,  test spec four"]
 	        },
 	        {
 		        "id": 2,
@@ -89,7 +96,9 @@
 		        "freindlyName": "product-five",
 		        "description": "this is a description for product five",
 		        "price": 210,
-		        "featured": true
+		        "featured": true,
+		        "features": [ "test feature one", "test feature two", "test feature three"],
+		        "specifications": [ "spec one title, test spec one", "spec two title, test spec two", "spec three title, test spec two", "spec three title, test spec three", "spec four title,  test spec four"]
 	        },
 	        {
 		        "id": 4,
@@ -98,7 +107,9 @@
 		        "description": "this is a description for product six",
 		        "price": 300,
 		        "latest": true,
-		        "bestSeller": true
+		        "bestSeller": true,
+		         "features": [ "test feature one", "test feature two", "test feature three"],
+		        "specifications": [ "spec one title, test spec one", "spec two title, test spec two", "spec three title, test spec two", "spec three title, test spec three", "spec four title,  test spec four"]
         	}
         ]
     },
@@ -115,7 +126,9 @@
 		        "freindlyName": "product-seven",
 		        "description": "this is a description for product seven",
 		        "price": 450,
-		        "latest": true
+		        "latest": true,
+		        "features": [ "test feature one", "test feature two", "test feature three"],
+		        "specifications": [ "spec one title, test spec one", "spec two title, test spec two", "spec three title, test spec two", "spec three title, test spec three", "spec four title,  test spec four"]
 	        },
 	        {
 		        "id": 2,
@@ -123,7 +136,9 @@
 		        "freindlyName": "product-eigth",
 		        "description": "this is a description for product eight",
 		        "price": 210,
-		        "bestSeller": true
+		        "bestSeller": true,
+		        "features": [ "test feature one", "test feature two", "test feature three"],
+		        "specifications": [ "spec one title, test spec one", "spec two title, test spec two", "spec three title, test spec two", "spec three title, test spec three", "spec four title,  test spec four"]
 	        },
 	        {
 		        "id": 3,
@@ -131,7 +146,9 @@
 		        "freindlyName": "product-nine",
 		        "description": "this is a description for product nine",
 		        "price": 110,
-		        "latest": true
+		        "latest": true,
+		        "features": [ "test feature one", "test feature two", "test feature three"],
+		        "specifications": [ "spec one title, test spec one", "spec two title, test spec two", "spec three title, test spec two", "spec three title, test spec three", "spec four title,  test spec four"]
         	}
         ]
     }
