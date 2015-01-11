@@ -56,3 +56,23 @@
 		</div>				
 	</div>
 </section>		
+<% content_for :jsscript do %>
+    <script type="text/javascript">
+            $(function() {
+                $(document).ready(function() {
+                    var product = getParameterByName('product');
+                    var message = "I would like to enquire about the following product: " + product.replace('-', ' ');
+                    var messageBox = $('#message');
+
+                    messageBox.text(message);
+                });
+
+                function getParameterByName(name) {
+				    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+				    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+				        results = regex.exec(location.search);
+				    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+				}
+            });
+        </script>
+<% end %>

@@ -74,5 +74,8 @@
                 });
             });
         </script>
+        <% if content_for?(:jsscript) %>  
+            <%= yield_content :jsscript %>
+        <% end %>
     </body>
 </html>
