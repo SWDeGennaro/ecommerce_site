@@ -16,9 +16,11 @@
 									<div class="product-box">
 										<span class="sale_tag"></span>
 										<p>
-											<% link_to "/#{c[:freindlyName]}/#{p[:freindlyName]}.html" do %>
-												<%= image_tag "http://placehold.it/342x342" %>
-											<% end %>
+											<% p[:images].take(1).each do |i| %>
+												<% link_to "/#{c[:freindlyName]}/#{p[:freindlyName]}.html" do %>
+													<%= image_tag "#{i[:largeImageUrl]}" %>
+												<% end %>
+											<% end %>		
 										</p>
 										<%= link_to "#{p[:name]}", "/#{c[:freindlyName]}/#{p[:freindlyName]}.html", :class => "title" %><br/>
 										<span class="category"><%= p[:description][0..70].gsub(/\s\w+\s*$/,'...') %></span>
@@ -37,9 +39,11 @@
 									<div class="product-box">
 										<span class="sale_tag"></span>
 										<p>
-											<% link_to "/#{c[:freindlyName]}/#{p[:freindlyName]}.html" do %>
-												<%= image_tag "http://placehold.it/342x342" %>
-											<% end %>
+											<% p[:images].take(1).each do |i| %>
+												<% link_to "/#{c[:freindlyName]}/#{p[:freindlyName]}.html" do %>
+													<%= image_tag "#{i[:largeImageUrl]}" %>
+												<% end %>
+											<% end %>	
 										</p>
 										<%= link_to "#{p[:name]}", "/#{c[:freindlyName]}/#{p[:freindlyName]}.html", :class => "title" %><br/>
 										<span class="category"><%= p[:description][0..70].gsub(/\s\w+\s*$/,'...') %></span>

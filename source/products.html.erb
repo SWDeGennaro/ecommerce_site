@@ -13,9 +13,11 @@
 					<li class="span3">
 						<div class="product-box">
 							<span class="sale_tag"></span>												
-							<% link_to "/#{category[:freindlyName]}/#{p[:freindlyName]}.html" do %>
-								<%= image_tag "http://placehold.it/342x342" %>
-							<% end %>
+							<% p[:images].take(1).each do |i| %>
+								<% link_to "/#{category[:freindlyName]}/#{p[:freindlyName]}.html" do %>
+									<%= image_tag "#{i[:largeImageUrl]}" %>
+								<% end %>
+							<% end %>	
 							<br/>	
 							<%= link_to "#{p[:name]}", "/#{category[:freindlyName]}/#{p[:freindlyName]}.html", :class => "title" %><br/>
 							<p class="price">£<%= p[:price] %></p>

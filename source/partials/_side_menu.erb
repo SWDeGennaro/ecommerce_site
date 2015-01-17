@@ -13,9 +13,11 @@
 			<% data.categories.each do |c| %>
 				<% c[:products].select { |p| p.bestSeller == true }.take(5).each do |p|%>
 					<li>
-						<% link_to "/#{c[:freindlyName]}/#{p[:freindlyName]}.html", :class => "/#{p[:name]}" do %>
-							<%= image_tag "http://placehold.it/342x342" %>
-						<% end %>
+						<% p[:images].take(1).each do |i| %>
+							<% link_to "/#{c[:freindlyName]}/#{p[:freindlyName]}.html" do %>
+								<%= image_tag "#{i[:thumbnailUrl]}" %>
+							<% end %>
+						<% end %>	
 						<%= link_to "#{p[:name]}", "/#{c[:freindlyName]}/#{p[:freindlyName]}.html", :class => "title" %>
 					</li>
 				<% end %>
